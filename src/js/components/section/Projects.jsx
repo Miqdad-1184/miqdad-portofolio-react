@@ -1,30 +1,24 @@
 import React from 'react';
 import CardProject from '../ui/CardProject.jsx';
-import CardPortal from '../../../assets/image.png';
+import ImagePortal from '../../../assets/portal.png';
+import ImagePortolio from '../../../assets/portofolio.png';
 
 const Projects = () => {
 
   const projectsData = [
     {
-      imageSrc: CardPortal,
-      title: 'Portal Akademik Mahasiswa',
-      description: 'Sebuah sistem portal untuk mahasiswa dalam mengakses informasi akademik, nilai, dan jadwal kuliah.',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-      projectLink: 'https://example.com/portal-akademik',
+      imageSrc: ImagePortal,
+      title: 'Winnicode News',
+      description: 'Winnicode News is a web application for managing and reading news, equipped with various interactive features. This web is built using a React.js, Express.js, and MySQL stack, and includes modern security features such as JWT Authentication and Role-based Access Control.',
+      technologies: ['React', 'Node.js', 'Express', 'MySql', 'CSS'],
+      projectLink: 'https://github.com/Miqdad-1184/Winnicode_Project',
     },
     {
-      imageSrc: CardPortal,
-      title: 'Aplikasi To-Do List Interaktif',
-      description: 'Aplikasi web sederhana untuk mengelola daftar tugas harian dengan fitur drag-and-drop.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      projectLink: 'https://example.com/todo-app',
-    },
-    {
-      imageSrc: CardPortal,
-      title: 'Platform E-Commerce Modern',
-      description: 'Platform belanja online dengan fitur keranjang, checkout, dan manajemen produk untuk admin.',
-      technologies: ['Next.js', 'TypeScript', 'Stripe', 'PostgreSQL', 'Redux'],
-      projectLink: 'https://example.com/ecommerce',
+      imageSrc: ImagePortolio,
+      title: 'Web Portofolio',
+      description: 'This portfolio showcases my fullstack web development expertise for internship programs. Built with React.js, Vite, and Tailwind CSS, it demonstrates my ability to create intuitive and responsive web applications. A comprehensive single-page application featuring Home, About, Skills, Projects, and Contact sections. ',
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+      projectLink: 'https://miqdad-portofolio.vercel.app/',
     },
   ];
 
