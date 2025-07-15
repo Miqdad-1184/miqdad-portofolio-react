@@ -1,25 +1,39 @@
-import './App.css'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-import Home from './components/Home.jsx'
-import About from './components/About.jsx'
-import Skills from './components/Skills.jsx'
-import Projects from './components/Projects.jsx'
-import Contact from './components/Contact.jsx'
+import Header from './components/section/Header.jsx'
+import Footer from './components/section/Footer.jsx'
+import Home from './components/section/Home.jsx'
+import About from './components/section/About.jsx'
+import Skills from './components/section/Skills.jsx'
+import Projects from './components/section/Projects.jsx'
+import Contact from './components/section/Contact.jsx'
+import React from 'react'
 
 function App() {
 
   return (
     <>
-      <Header />
-      <main>
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+      <header>
+        <Header />
+      </header>
+      <main className='pt-14'>
+        <section id='home' className='scroll-mt-14'>
+          <Home />
+        </section>
+        <section id='about' className='scroll-mt-14'>
+          <About />
+        </section>
+        <section id='skills' className='scroll-mt-14'>
+          <Skills />
+        </section>
+        <section id='projects' className='scroll-mt-14'>
+          <Projects />
+        </section>
+        <section id='contact' className='scroll-mt-14'>
+          <Contact/>
+        </section>
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }
