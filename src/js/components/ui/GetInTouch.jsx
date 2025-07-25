@@ -10,9 +10,9 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const SERVICE_ID = 'service_6013u2p'; 
-    const TEMPLATE_ID = 'template_bpb7pzf';
-    const PUBLIC_KEY = 'DjDQckvFe3hqNP53_'; 
+    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID; 
+    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY; 
 
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       setStatusMessage('Error: EmailJS IDs tidak dikonfigurasi.');
