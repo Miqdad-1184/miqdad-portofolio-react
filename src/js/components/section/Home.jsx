@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button.jsx';
-import DotGrid from '../animation/Squares.jsx';
+import DotGrid from '../animation/DotGrid.jsx';
 
 const Home = () => {
   return (
