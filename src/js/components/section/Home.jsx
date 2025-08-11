@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../ui/Button.jsx';
 import DotGrid from '../animation/DotGrid.jsx';
 
-const Home = () => {
+const Home = ({onScrollContact}) => {
   return (
     <div className='relative flex flex-col items-center text-center py-27 px-4 md:py-45 md:px-30 bg-[#0a192f] min-h-screen overflow-hidden'>
       <div className='absolute inset-0 z-0'>
@@ -28,7 +28,7 @@ const Home = () => {
         </p>
         <section className='flex flex-col md:flex-row gap-4 mt-5'>
           <Button text="Download CV" link="https://drive.google.com/drive/folders/1HtATM37a2YtbUqquPw1iL5y-LM0W9wTf?usp=sharing"/>
-          <Button text="Contact Me" link="#contact"/>
+          <Button text="Contact Me" onClick={onScrollContact} />
         </section>
       </div>
     </div>
