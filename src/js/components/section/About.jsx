@@ -6,7 +6,7 @@ const About = () => {
     <div className='py-10 px-4 md:px-30 bg-[#112240]'>
       <h1 className='font-bold bg-gradient-to-r from-purple-700 to-blue-700 bg-clip-text text-transparent text-center text-2xl md:text-3xl mb-8'>About Me</h1>
       <div className='flex flex-col md:flex-row justify-center items-center md:items-start gap-8'>
-        <aside className='w-full flex justify-center md:w-auto'>
+        <aside className='w-1/4 md:w-1/4'>
           <Photo />
         </aside>
         <main className='text-[#8892b0] w-full md:w-2/3 text-justify px-4 md:px-0'>
