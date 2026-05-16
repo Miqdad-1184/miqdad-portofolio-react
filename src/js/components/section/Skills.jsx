@@ -1,7 +1,7 @@
 import React from 'react';
 import CardSkill from '../ui/CardSkill.jsx';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaCode, FaTools, FaNodeJs, FaFigma} from 'react-icons/fa';
-import { SiMysql, SiTailwindcss, SiGit, SiExpress} from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaCode, FaTools, FaNodeJs, FaFigma, FaGitlab} from 'react-icons/fa';
+import { SiMysql, SiTailwindcss, SiGit, SiExpress, SiPostman} from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 import { DiGithubBadge, } from 'react-icons/di';
 
@@ -34,6 +34,8 @@ const skillsData = [
       { name: 'VS Code', logo: <VscVscode className='text-[#007ACC] text-4xl' /> },
       { name: 'GitHub', logo: <DiGithubBadge className='text-[#181717] text-4xl' /> },
       { name: 'Figma', logo: <FaFigma className='text-[#F24E1E] text-4xl' /> },
+      { name: 'GitLab', logo: <FaGitlab className='text-[#FC6D26] text-4xl' /> },
+      { name: 'Postman', logo: <SiPostman className='text-[#FF6C37] text-4xl' /> },
     ],
   },
 ];

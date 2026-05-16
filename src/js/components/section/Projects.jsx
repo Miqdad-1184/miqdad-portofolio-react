@@ -1,17 +1,17 @@
 import React from 'react';
 import CardProject from '../ui/CardProject.jsx';
-import ImagePortal from '../../../assets/portal.png';
+import ImagePasmahaguru from '../../../assets/pasmahaguru.png';
 import ImagePortolio from '../../../assets/portofolio.png';
 
 const Projects = () => {
 
   const projectsData = [
     {
-      imageSrc: ImagePortal,
-      title: 'Winnicode News',
-      description: 'Winnicode News is a web application for managing and reading news, equipped with various interactive features. This web is built using a React.js, Express.js, and MySQL stack, and includes modern security features such as JWT Authentication and Role-based Access Control.',
-      technologies: ['React', 'Node.js', 'Express', 'MySql', 'CSS'],
-      projectLink: 'https://github.com/Miqdad-1184/Winnicode_Project',
+      imageSrc: ImagePasmahaguru,
+      title: 'Web Organisasi P.A.S Mahaguru',
+      description: 'This website serves as the official digital gateway for P.A.S Mahaguru (Pecinta Alam Sejati Mahasiswa Keguruan). It is designed to showcase the organization\'s profile, member structure, and batch list, while also acting as a digital journal documenting their adventures, activities, and photo gallery. Please note that this website is currently still under development.',
+      technologies: ['React', 'CSS', 'Tailwind CSS', 'Axios', 'Excell'],
+      projectLink: 'https://pasmahaguru.web.id',
     },
     {
       imageSrc: ImagePortolio,

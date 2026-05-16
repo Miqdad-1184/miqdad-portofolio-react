@@ -27,7 +27,7 @@ const Home = ({onScrollContact}) => {
           I am a fullstack web developer with a passion for creating dynamic and responsive web applications. I have experience in both frontend and backend development, and I enjoy working with the latest technologies to build innovative solutions.
         </p>
         <section className='flex flex-col md:flex-row gap-4 mt-5'>
-          <Button text="Download CV" link="https://drive.google.com/drive/folders/1HtATM37a2YtbUqquPw1iL5y-LM0W9wTf?usp=sharing"/>
+          <Button text="Check My CV" link="https://drive.google.com/drive/folders/1HtATM37a2YtbUqquPw1iL5y-LM0W9wTf?usp=sharing"/>
           <Button text="Contact Me" onClick={onScrollContact} />
         </section>
       </div>
