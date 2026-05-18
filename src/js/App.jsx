@@ -5,11 +5,13 @@ import About from './components/section/About.jsx'
 import Skills from './components/section/Skills.jsx'
 import Projects from './components/section/Projects.jsx'
 import Contact from './components/section/Contact.jsx'
-import React from 'react'
-import {useRef} from 'react'
+import Experience from './components/section/Experience.jsx'
+import React, { useState, useRef } from 'react'
+import { translations } from './i18n.js'
 
 function App() {
-
+  const [language, setLanguage] = useState('en');
+  const copy = translations[language];
   const contactRef = useRef(null);
 
   function handleScrollToContact() {
@@ -21,27 +23,34 @@ function App() {
   return (
     <>
       <header>
-        <Header />
+        <Header
+          nav={copy.nav}
+          language={language}
+          onLanguageChange={setLanguage}
+        />
       </header>
       <main className='pt-14'>
         <section id='home' className='scroll-mt-14'>
-          <Home onScrollContact={handleScrollToContact}/>
+          <Home onScrollContact={handleScrollToContact} text={copy.home} />
         </section>
         <section id='about' className='scroll-mt-14'>
-          <About />
+          <About text={copy.about} />
+        </section>
+        <section id='experience' className='scroll-mt-14'>
+          <Experience text={copy.experience} />
         </section>
         <section id='skills' className='scroll-mt-14'>
-          <Skills />
+          <Skills text={copy.skills} />
         </section>
         <section id='projects' className='scroll-mt-14'>
-          <Projects />
+          <Projects text={copy.projects} />
         </section>
         <section id='contact' className='scroll-mt-14' ref={contactRef}>
-          <Contact/>
+          <Contact text={copy.contact} />
         </section>
       </main>
       <footer>
-        <Footer />
+        <Footer text={copy.footer} />
       </footer>
     </>
   )

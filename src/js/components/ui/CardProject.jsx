@@ -6,6 +6,7 @@ const CardProject = ({
   description,
   technologies,
   projectLink,
+  viewText,
 }) => {
   return (
     <div>
@@ -31,7 +32,7 @@ const CardProject = ({
         <p className="text-gray-400 mt-2">{description}</p>
         <button className="mt-4 bg-gradient-to-r from-purple-700 to-blue-700 text-white px-4 py-2 rounded hover:bg-[#4e238d] transition-colors duration-300">
           <a href={projectLink}>
-            View Project
+            {viewText}
           </a>
         </button>
       </div>

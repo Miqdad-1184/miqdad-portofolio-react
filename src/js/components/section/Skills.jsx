@@ -40,10 +40,10 @@ const skillsData = [
   },
 ];
 
-const Skills = () => {
+const Skills = ({ text }) => {
   return (
     <div className='py-10 px-4 md:px-30 bg-[#0a192f]'>
-      <h1 className='font-bold bg-gradient-to-r from-purple-700 to-blue-700 bg-clip-text text-transparent text-center text-2xl md:text-3xl mb-8'>Skills</h1>
+      <h1 className='font-bold bg-gradient-to-r from-purple-700 to-blue-700 bg-clip-text text-transparent text-center text-2xl md:text-3xl mb-8'>{text.heading}</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 max-w-5xl mx-auto'>
         {skillsData.map((category, index) => (
           <div key={index} className='bg-[#112240] text-[#bcc6e6] p-6 rounded-lg shadow-xl'>

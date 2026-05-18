@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-const ContactForm = () => {
+const ContactForm = ({ text }) => {
   const form = useRef();
 
   const [isSending, setIsSending] = useState(false);
@@ -15,21 +15,21 @@ const ContactForm = () => {
     const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY; 
 
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      setStatusMessage('Error: EmailJS IDs tidak dikonfigurasi.');
+      setStatusMessage(text.status.missingConfig);
       return;
     }
 
     setIsSending(true);
-    setStatusMessage('Mengirim pesan...');
+    setStatusMessage(text.status.sending);
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
-          console.log('Pengiriman berhasil:', result.text);
-          setStatusMessage('Pesan berhasil dikirim!');
-          form.current.reset(); 
+          console.log('Email sent:', result.text);
+          setStatusMessage(text.status.success);
+          form.current.reset();
       }, (error) => {
-          console.error('Pengiriman gagal:', error);
-          setStatusMessage('Gagal mengirim pesan. Silakan coba lagi.');
+          console.error('Email error:', error);
+          setStatusMessage(text.status.failure);
       })
       .finally(() => {
         setIsSending(false);
@@ -41,16 +41,14 @@ const ContactForm = () => {
       <div className="bg-[#1a2c4e] shadow-2xl rounded-xl p-8 max-w-2xl w-full mx-4">
         
         <div className="text-center mb-10 text-[#8892b0]">
-          <p className="text-lg">
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-          </p>
+          <p className="text-lg">{text.intro}</p>
         </div>
 
         <form ref={form} onSubmit={handleSubmit} className="space-y-6">
           
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
-              <label htmlFor="name" className="block text-sm font-medium text-[#8892b0] mb-2">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-[#8892b0] mb-2">{text.fields.name}</label>
               <input
                 type="text"
                 id="name"
@@ -61,7 +59,7 @@ const ContactForm = () => {
             </div>
             
             <div className="flex-1">
-              <label htmlFor="email" className="block text-sm font-medium text-[#8892b0] mb-2">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-[#8892b0] mb-2">{text.fields.email}</label>
               <input
                 type="email"
                 id="email"
@@ -73,7 +71,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-[#8892b0] mb-2">Subject</label>
+            <label htmlFor="subject" className="block text-sm font-medium text-[#8892b0] mb-2">{text.fields.subject}</label>
             <input
               type="text"
               id="subject"
@@ -84,7 +82,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-[#8892b0] mb-2">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-[#8892b0] mb-2">{text.fields.message}</label>
             <textarea
               id="message"
               name="message"
@@ -103,7 +101,7 @@ const ContactForm = () => {
                        transition duration-300"
             disabled={isSending}
           >
-            {isSending ? 'Mengirim...' : 'Send Message'}
+            {isSending ? text.sending : text.submitButton}
           </button>
         </form>
 
