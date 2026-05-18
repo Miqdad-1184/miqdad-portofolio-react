@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaWhatsapp, FaGithub, FaInstagram } from 'react-ic
 
 const CardName = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const technologies = ['HTML', 'CSS', 'Javascript', 'React', 'Node.js', 'Express', 'MySQL', 'Tailwind CSS'];
+  const technologies = ['HTML', 'CSS', 'Javascript', 'React', 'Python', 'FastAPI', 'PostgreSQL', 'Tailwind CSS'];
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);

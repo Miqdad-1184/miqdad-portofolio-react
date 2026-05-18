@@ -1,7 +1,7 @@
 import React from 'react';
 import CardSkill from '../ui/CardSkill.jsx';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaCode, FaTools, FaNodeJs, FaFigma, FaGitlab} from 'react-icons/fa';
-import { SiMysql, SiTailwindcss, SiGit, SiExpress, SiPostman} from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase, FaCode, FaTools, FaFigma, FaGitlab, FaPython} from 'react-icons/fa';
+import { SiTailwindcss, SiGit, SiPostman, SiFastapi, SiPostgresql} from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 import { DiGithubBadge, } from 'react-icons/di';
 
@@ -21,9 +21,9 @@ const skillsData = [
     title: 'Backend',
     icon: <FaDatabase className='text-[#8a2be2] text-2xl' />,
     technologies: [
-      { name: 'Node.js', logo: <FaNodeJs className='text-[#68A063] text-4xl' /> },
-      { name: 'Express.js', logo: <SiExpress className='text-[#000000] text-4xl' /> },
-      { name: 'MySQL', logo: <SiMysql className='text-[#4479A1] text-4xl' /> },
+      { name: 'FastAPI', logo: <SiFastapi className='text-[#009688] text-4xl' /> },
+      { name: 'PostgreSQL', logo: <SiPostgresql className='text-[#336791] text-4xl' /> },
+      { name: 'Python', logo: <FaPython className='text-[#306998] text-4xl' /> },
     ],
   },
   {

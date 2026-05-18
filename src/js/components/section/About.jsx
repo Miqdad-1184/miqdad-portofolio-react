@@ -10,7 +10,7 @@ const About = () => {
           <Photo />
         </aside>
         <main className='text-[#8892b0] w-full md:w-2/3 text-justify px-4 md:px-0'>
-          <p>A Mechatronics and Artificial Intelligence student at Universitas Pendidikan Indonesia, passionate about end-to-end web development. Proficient in modern front-end technologies like React.js for building interactive and responsive user interfaces, and skilled in back-end development using Node.js and Express.js to create efficient and scalable systems. Committed to continuous learning and contributing to innovative and comprehensive web solutions. Enthusiastic about developing a career as a Full-Stack Web Developer in a dynamic professional environment. Equipped with leadership and organizational management experience as a Chairman and staff member, which strengthens team collaboration, project management, and problem-solving skills in a dynamic development environment.</p>
+          <p>Mechatronics and Artificial Intelligence student at Universitas Pendidikan Indonesia, specializing in Full-Stack Web Development. Proficient in modern front-end frameworks like React.js for building interactive user interfaces, and skilled in back-end engineering using FastAPI (Python) to create efficient, high-performance, and scalable APIs. Equipped with leadership experience as an organization President, which strengthens project management, communication, and team collaboration in fast-paced environments.</p>
         </main>
       </div>
     </div>
